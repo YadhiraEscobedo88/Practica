@@ -28,7 +28,8 @@ FROM nobel
 WHERE subject = 'Literature'
 AND yr BETWEEN 1980 AND 1989
 
-#Show all details of the presidential winners:
+
+#Show all details of the presidential winners: 
 
 -Theodore Roosevelt
 -Woodrow Wilson
@@ -40,5 +41,10 @@ WHERE winner IN ('Theodore Roosevelt', 'Woodrow Wilson', 'Jed Bartlet',
   'Jimmy Carter','Barack Obama')
   
   #Show the winners with first name John
-  
+  SELECT winner
+FROM nobel
+WHERE winner LIKE 'John%'
+
+#Show the year, subject, and name of Physics winners for 1980 together with the Chemistry winners for 1984.
+
 
